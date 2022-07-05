@@ -15,7 +15,8 @@ namespace MorphleInventorymanagementSystem
         SqlConnection con = new SqlConnection("Data Source=localhost\\MSSQLSERVER01;Initial Catalog=MorphleInventoryManagementSystem;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            BindData();
+            GridView1.DataBind();
         }
         void BindData()
         {
@@ -62,7 +63,40 @@ namespace MorphleInventorymanagementSystem
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-          
+
+            if (option.Text == "Part Number")
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from ReceivePart where Part_Number like'%" + TextBox1.Text + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                con.Close();
+                GridView1.DataSource = ds;
+                GridView1.DataBind();
+            }
+            else if (option.Text == "Part Discription")
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from ReceivePart where Part_Discription like'%" + TextBox1.Text + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                con.Close();
+                GridView1.DataSource = ds;
+                GridView1.DataBind();
+            }
+            else
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from ReceivePart where [Name of Person Receiving] like'%" + TextBox1.Text + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                con.Close();
+                GridView1.DataSource = ds;
+                GridView1.DataBind();
+            }
         }
     }
 }

@@ -80,12 +80,12 @@ namespace MorphleInventorymanagementSystem
 
         protected void search_Click(object sender, EventArgs e)
         {
-            Response.Redirect("searchBOM.aspx");
+            
         }
 
         protected void search_Click1(object sender, EventArgs e)
         {
-
+            Response.Redirect("searchBOM.aspx");
         }
     }
 }
