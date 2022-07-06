@@ -42,7 +42,7 @@ namespace MorphleInventorymanagementSystem
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
-            date.Text = Calendar.SelectedDate.ToShortDateString();
+            date.Text = Calendar.SelectedDate.ToString();
             Calendar.Visible = false;
         }
 
