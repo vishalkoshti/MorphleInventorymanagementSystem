@@ -42,7 +42,7 @@ namespace MorphleInventorymanagementSystem
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
-            date.Text = Calendar.SelectedDate.ToString();
+            date.Text = Calendar.SelectedDate.ToShortDateString();
             Calendar.Visible = false;
         }
 
@@ -58,11 +58,26 @@ namespace MorphleInventorymanagementSystem
 
         protected void receive_Click1(object sender, EventArgs e)
         {
+          
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into ReceivePart values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','" + name.Text + "','" + DateTime.ParseExact(date.Text, "dd/MM/yyyy", null) + "','" + qtyreceived.Text + "')", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Write("<script>alert('Received Succefully!!')</script>");
+        }
+
+        protected void movetoQC_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void movetoQC_Click1(object sender, EventArgs e)
+        {
             int QtyQCDone, QCPending;
             QtyQCDone = 0;
-            QCPending = Convert.ToInt32(this.qtyreceived.Text);
+            QCPending = Int32.Parse(qtyreceived.Text);
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into ReceivePart values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','" + name.Text + "','" + this.date.Text + "','" + qtyreceived.Text + "','" + QtyQCDone + "','" + QCPending + "')", con);
+            SqlCommand cmd = new SqlCommand("insert into QCLIST values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','" + QtyQCDone + "','" + QCPending + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Write("<script>alert('Received Succefully!!')</script>");

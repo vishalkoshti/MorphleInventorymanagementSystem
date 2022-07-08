@@ -213,6 +213,15 @@ namespace MorphleInventorymanagementSystem
         protected global::System.Web.UI.WebControls.Button receive;
 
         /// <summary>
+        /// movetoQC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button movetoQC;
+
+        /// <summary>
         /// receivedpartreport control.
         /// </summary>
         /// <remarks>
