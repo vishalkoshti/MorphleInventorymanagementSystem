@@ -64,7 +64,7 @@
                         <asp:Panel ID="Panel1" runat="server">
                             <asp:CheckBoxList ID="selectpart" runat="server" DataSourceID="fetchdatafromBOM" DataTextField="Part_Discription" DataValueField="Part_Discription" Height="59px" Width="648px">
                             </asp:CheckBoxList>
-                            <asp:SqlDataSource ID="fetchdatafromBOM" runat="server" ConnectionString="<%$ ConnectionStrings:MorphleInventoryManagementSystemConnectionString %>" SelectCommand="SELECT [Part_Discription] FROM [BOM] WHERE ([Part_Discription] LIKE '%' + @Part_Discription + '%')">
+                            <asp:SqlDataSource ID="fetchdatafromBOM" runat="server" ConnectionString="<%$ ConnectionStrings:MorphleInventoryManagementSystemConnectionString %>" SelectCommand="SELECT [Part_Number], [Part_Discription], [Category] FROM [BOM] WHERE ([Part_Discription] LIKE '%' + @Part_Discription + '%')">
                                 <SelectParameters>
                                     <asp:ControlParameter ControlID="searchpartdiscription" Name="Part_Discription" PropertyName="Text" Type="String" />
                                 </SelectParameters>

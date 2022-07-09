@@ -13,5 +13,10 @@ namespace MorphleInventorymanagementSystem
         {
 
         }
+
+        protected void Componentlevelconsumption_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("componentlevelconsumption.aspx");
+        }
     }
 }

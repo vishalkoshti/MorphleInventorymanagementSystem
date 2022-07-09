@@ -107,6 +107,7 @@
   <ItemGroup>
     <Content Include="addpart.aspx" />
     <Content Include="bookforproduction.aspx" />
+    <Content Include="componentlevelconsumption.aspx" />
     <Content Include="consume.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -180,6 +181,13 @@
     </Compile>
     <Compile Include="bookforproduction.aspx.designer.cs">
       <DependentUpon>bookforproduction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="componentlevelconsumption.aspx.cs">
+      <DependentUpon>componentlevelconsumption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="componentlevelconsumption.aspx.designer.cs">
+      <DependentUpon>componentlevelconsumption.aspx</DependentUpon>
     </Compile>
     <Compile Include="consume.aspx.cs">
       <DependentUpon>consume.aspx</DependentUpon>
