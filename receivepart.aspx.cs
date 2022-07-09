@@ -77,10 +77,10 @@ namespace MorphleInventorymanagementSystem
             QtyQCDone = 0;
             QCPending = Int32.Parse(qtyreceived.Text);
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into QCLIST values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','" + QtyQCDone + "','" + QCPending + "')", con);
+            SqlCommand cmd = new SqlCommand("insert into QCLIST values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','"+ qtyreceived.Text + "','" + QCPending + "','" + QtyQCDone + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
-            Response.Write("<script>alert('Received Succefully!!')</script>");
+            Response.Write("<script>alert('Moved for Inspection Succefully!!')</script>");
         }
     }
 }
