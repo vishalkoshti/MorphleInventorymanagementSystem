@@ -12,6 +12,9 @@
         .auto-style2 {
             height: 26px;
         }
+        .auto-style3 {
+            height: 29px;
+        }
     </style>
 </head>
 <body>
@@ -89,14 +92,17 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style3">
                         <asp:Label ID="Label5" runat="server" Text="Date"></asp:Label>
-                    </td>
-                    <td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                    <td class="auto-style3">
                         <asp:TextBox ID="date" runat="server"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">
+                        <asp:Button ID="dateselection" runat="server" OnClick="dateselection_Click" Text="Select Date" />
+                        <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" Visible="False"></asp:Calendar>
+                    </td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
