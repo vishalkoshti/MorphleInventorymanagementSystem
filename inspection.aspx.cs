@@ -13,7 +13,7 @@ namespace MorphleInventorymanagementSystem
     public partial class inspection : System.Web.UI.Page
     {
 
-        SqlConnection con = new SqlConnection("Data Source=localhost\\MSSQLSERVER01;Initial Catalog=MorphleInventoryManagementSystem;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=localhost\\MSSQLSERVER01;Initial Catalog=MorphleInventoryManagementSystem;Integrated Security=True;MultipleActiveResultSets=true");
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -70,12 +70,23 @@ namespace MorphleInventorymanagementSystem
 
         protected void addtostock_Click(object sender, EventArgs e)
         {
-          
-                con.Open();
-                SqlCommand cmd = new SqlCommand("insert into StockAvailablity values ('" + partnumber.Text + "','" + partdiscription.Text + "','"+category.Text+"','"+ qtyaccepted.Text+ "')", con);
-                cmd.ExecuteNonQuery();
+            SqlCommand cmd = new SqlCommand("Select * from StockAvailability where Part_Number='" + partnumber.Text + "'", con);
+            con.Open();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            if (sdr.HasRows)
+            {
+                SqlCommand cmd1 = new SqlCommand("update StockAvailability set [Qty Available]=[Qty Available]+" + qtyaccepted.Text+" where Part_Number='" + partnumber.Text + "'", con);
+                cmd1.ExecuteNonQuery();
                 con.Close();
-            Response.Write("<script>alert('Moved to Stock!!')</script>");
+                Response.Write("<script>alert('Successfully Updated Stock Quantity')</script>");
+            }
+            else
+            {
+                SqlCommand cmd2 = new SqlCommand("insert into StockAvailability values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','"+qtyaccepted.Text+"')", con);
+                cmd2.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Part Added to Stock Succefully!!')</script>");
+            }
+        }
         }
     }
-}
