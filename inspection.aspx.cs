@@ -25,6 +25,7 @@ namespace MorphleInventorymanagementSystem
             partnumber.Text = row.Cells[1].Text;
             partdiscription.Text = row.Cells[2].Text;
             category.Text = row.Cells[3].Text;
+            qtyreceived.Text = row.Cells[4].Text;
         }
 
         protected void dateselection_Click(object sender, EventArgs e)
@@ -46,6 +47,25 @@ namespace MorphleInventorymanagementSystem
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Write("<script>alert('Inspection Completed Succefully!!')</script>");
+        }
+
+        protected void updateqclist_Click(object sender, EventArgs e)
+        {
+            int qty_accepted = Int32.Parse(qtyaccepted.Text);
+            int qty_rejected = Int32.Parse(qtyrejected.Text);
+            int qty_qcdone = qty_accepted + qty_rejected;
+            int qty_received=Int32.Parse(qtyreceived.Text);
+            int qty_qcpending = qty_received - qty_qcdone;
+            SqlCommand cmd = new SqlCommand(@"UPDATE [dbo].[QCLIST]
+                 SET[Part Number] = '" + partnumber.Text + "',[Part Discription] = '" + partdiscription.Text + "',[Category] = '" + category.Text + "',[Qty Received] = '"+qtyreceived.Text+"',[Qty QC Pending]='"+qty_qcpending+"',[Qty QC Done]='"+qty_qcdone+"' WHERE [Part Discription] = '" + partdiscription.Text + "' ", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Write("<script>alert('Updated QC Table Succefully!!')</script>");
+            GridView1.DataBind();
+
+
+
         }
     }
 }

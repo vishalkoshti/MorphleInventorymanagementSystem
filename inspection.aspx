@@ -89,7 +89,9 @@
                     <td>
                         <asp:TextBox ID="name" runat="server"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:TextBox ID="qtyreceived" runat="server" Visible="False"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style3"></td>
@@ -129,8 +131,12 @@
                     <td>
                         <asp:Button ID="Submit" runat="server" OnClick="Submit_Click" Text="Submit" />
                     </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Button ID="updateqclist" runat="server" OnClick="updateqclist_Click" Text="Update " />
+                    </td>
+                    <td>
+                        <asp:Button ID="addtostock" runat="server" Text="Add to Stock" />
+                    </td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
