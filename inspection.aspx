@@ -135,7 +135,7 @@
                         <asp:Button ID="updateqclist" runat="server" OnClick="updateqclist_Click" Text="Update " />
                     </td>
                     <td>
-                        <asp:Button ID="addtostock" runat="server" Text="Add to Stock" />
+                        <asp:Button ID="addtostock" runat="server" OnClick="addtostock_Click" Text="Add to Stock" />
                     </td>
                 </tr>
                 <tr>

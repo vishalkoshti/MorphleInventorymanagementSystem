@@ -67,5 +67,14 @@ namespace MorphleInventorymanagementSystem
 
 
         }
+
+        protected void addtostock_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into StockAvailabity values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','" +qtyaccepted.Text+"')", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Write("<script>alert('Inspection Completed Succefully!!')</script>");
+        }
     }
 }
