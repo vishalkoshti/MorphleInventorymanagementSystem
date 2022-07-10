@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="componentlevelconsumption.aspx.cs" Inherits="MorphleInventorymanagementSystem.componentlevelconsumption" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation = "false" CodeBehind="componentlevelconsumption.aspx.cs" Inherits="MorphleInventorymanagementSystem.componentlevelconsumption" %>
 
 <!DOCTYPE html>
 
