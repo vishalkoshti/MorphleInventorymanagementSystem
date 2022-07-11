@@ -1,0 +1,1 @@
+﻿select Part_Number,Part_Discription,Category,(C240*2)as Batch,Optimus,H1,H6,indexscanner,Brain,(C240+Optimus+H1+H6+indexscanner+Brain) as [Total Qty] from BOM

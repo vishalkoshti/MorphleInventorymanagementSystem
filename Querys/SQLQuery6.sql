@@ -1,0 +1,1 @@
+﻿select BOM.Part_Number,BOM.Part_Discription,BOM.Category,(BOM.C240*2) as [C240 Batch],(BOM.Optimus*2) as [Optimus Batch],(BOM.H1*2) as [H1 Batch],(BOM.H6*2) as [H6 Batch],(BOM.indexscanner*2) as [Index Batch],(BOM.Brain*2) as [Brain Batch], StockAvailability.[Qty Available] from BOM inner join StockAvailability on BOM.Part_Number=StockAvailability.Part_Number;
