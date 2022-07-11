@@ -44,9 +44,9 @@ namespace MorphleInventorymanagementSystem
 
         protected void update_Click(object sender, EventArgs e)
         {
+            con.Open();
             SqlCommand cmd = new SqlCommand(@"UPDATE [dbo].[BOM]
                  SET[Part_Discription] = '" + TextBox2.Text + "',[Part_Number] = '" + TextBox1.Text + "',[Category] = '" + DropDownList1.Text + "',[C240] = '" + TextBox3.Text + "',[Optimus] = '" + TextBox4.Text + "',[H1] = '" + TextBox5.Text + "',[H6] = '" + TextBox6.Text + "',[indexscanner] = '" + TextBox7.Text + "',[Brain] = '" + TextBox8.Text + "' WHERE [Part_Discription] = '" + TextBox2.Text + "' ", con);
-            con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
             BindData();
