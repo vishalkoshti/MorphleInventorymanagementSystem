@@ -30,7 +30,7 @@ namespace MorphleInventorymanagementSystem
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("select Part_Number,Part_Discription,Category,(C240*"+c240.Text+") as [C240 Batch],(Optimus*"+optimus.Text+ ") as [Optimus Batch],(H1*" + h1.Text + ") as [H1 Batch],(H6*" + h6.Text + ") as [H6 Batch],(indexscanner*" + index.Text + ") as [Index Batch],(Brain*" + brain.Text + ") as [Brain Batch],([C240 Batch]+[Optimus Batch]+[H1 Batch]+[H6 Batch]+[indexscanner Batch]+[Brain Batch]) as [Total Qty] from BOM", con);
+            SqlCommand command = new SqlCommand("select Part_Number,Part_Discription,Category,(C240*"+c240.Text+") as [C240 Batch],(Optimus*"+optimus.Text+ ") as [Optimus Batch],(H1*" + h1.Text + ") as [H1 Batch],(H6*" + h6.Text + ") as [H6 Batch],(indexscanner*" + index.Text + ") as [Index Batch],(Brain*" + brain.Text + ") as [Brain Batch], ((C240*" + c240.Text + ")+(Optimus*" + optimus.Text + ")+(H1*" + h1.Text + ")+(H6*" + h6.Text + ")+(indexscanner*" + index.Text + ")+(Brain*" + brain.Text + "))as [Total Qty Required]from BOM", con);
             SqlDataAdapter sd = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sd.Fill(dt);
