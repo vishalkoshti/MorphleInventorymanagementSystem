@@ -128,6 +128,7 @@
   <ItemGroup>
     <Content Include="addpart.aspx" />
     <Content Include="bookforproduction.aspx" />
+    <Content Include="bulkuploadbomdata.aspx" />
     <Content Include="componentlevelconsumption.aspx" />
     <Content Include="consume.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -215,6 +216,13 @@
     </Compile>
     <Compile Include="bookforproduction.aspx.designer.cs">
       <DependentUpon>bookforproduction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bulkuploadbomdata.aspx.cs">
+      <DependentUpon>bulkuploadbomdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bulkuploadbomdata.aspx.designer.cs">
+      <DependentUpon>bulkuploadbomdata.aspx</DependentUpon>
     </Compile>
     <Compile Include="componentlevelconsumption.aspx.cs">
       <DependentUpon>componentlevelconsumption.aspx</DependentUpon>

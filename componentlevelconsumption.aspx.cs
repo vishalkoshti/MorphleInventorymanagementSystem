@@ -123,6 +123,7 @@ namespace MorphleInventorymanagementSystem
             SqlCommand cmd = new SqlCommand("update StockAvailability set [Qty Available]=[Qty Available]-" + Qty.Text + " where Part_Number='" + partnumber.Text + "'", con);
             cmd.ExecuteNonQuery();
             con.Close();
+            BindData();
             GridView1.DataBind();
             Response.Write("<script>alert('Successfully Updated Stock Quantity')</script>");
         }

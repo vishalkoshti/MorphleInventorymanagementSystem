@@ -87,5 +87,10 @@ namespace MorphleInventorymanagementSystem
         {
             Response.Redirect("searchBOM.aspx");
         }
+
+        protected void uploadfromexcel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("bulkuploadbomdata.aspx");
+        }
     }
 }

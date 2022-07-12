@@ -140,7 +140,9 @@
                         <asp:Button ID="delete" runat="server" OnClick="delete_Click" Text="Delete" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="search" runat="server" Text="Search" OnClick="search_Click1" />
-                        &nbsp;</td>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="uploadfromexcel" runat="server" OnClick="uploadfromexcel_Click" Text="Bulk Upload from Excel" />
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
