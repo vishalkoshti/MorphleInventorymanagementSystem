@@ -70,7 +70,9 @@ namespace MorphleInventorymanagementSystem
         }
 
         protected void chk_Click(object sender, EventArgs e)
+
         {
+            RequiredFieldValidator1.IsValid = false;
             SqlCommand cmd = new SqlCommand("Select * from BOM where Part_Number='" + TextBox1.Text + "'", con);
             con.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
@@ -80,7 +82,11 @@ namespace MorphleInventorymanagementSystem
             }
             else
             {
-                Response.Write("<scipt>alert('Proceed')</script>");
+                Response.Write("<script>alert('Proceed')</script>");
+                add.Visible = true;
+                update.Visible = true;
+                delete.Visible = true;
+                
             }
         }
 

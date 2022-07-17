@@ -16,15 +16,17 @@
         <div>
         </div>
         <p>
-            &nbsp;</p>
+            <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Morphle Inventory Management"></asp:Label>
+        </p>
         <p>
             &nbsp;</p>
         <p>
-            &nbsp;</p>
+            <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Login"></asp:Label>
+        </p>
         <table class="auto-style1">
             <tr>
                 <td>
-                    <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Username" Font-Bold="True" Font-Size="Large"></asp:Label>
                 </td>
                 <td>
                     <asp:TextBox ID="username" runat="server"></asp:TextBox>
@@ -36,7 +38,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Password" Font-Bold="True" Font-Size="Large"></asp:Label>
                 </td>
                 <td>
                     <asp:TextBox ID="password" runat="server" EnableViewState="False" TextMode="Password"></asp:TextBox>

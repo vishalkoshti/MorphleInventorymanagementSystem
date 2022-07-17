@@ -42,6 +42,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="Label10" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Morphle Inventory Management"></asp:Label>
             <br />
             <table class="auto-style1">
                 <tr>
@@ -62,7 +63,8 @@
                     <td class="auto-style6">
                         <asp:TextBox ID="TextBox2" runat="server" Width="602px"></asp:TextBox>
                     </td>
-                    <td class="auto-style2"></td>
+                    <td class="auto-style2">
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
@@ -74,7 +76,8 @@
                             <asp:ListItem>Cots</asp:ListItem>
                         </asp:DropDownList>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style7">
@@ -83,7 +86,8 @@
                     <td class="auto-style8">
                         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                     </td>
-                    <td class="auto-style9"></td>
+                    <td class="auto-style9">
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
@@ -92,7 +96,8 @@
                     <td class="auto-style5">
                         <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
@@ -101,7 +106,8 @@
                     <td class="auto-style5">
                         <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
@@ -110,7 +116,8 @@
                     <td class="auto-style5">
                         <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
@@ -119,7 +126,8 @@
                     <td class="auto-style5">
                         <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
@@ -128,27 +136,29 @@
                     <td class="auto-style5">
                         <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:Button ID="add" runat="server" OnClick="add_Click" Text="Add" />
+                        <asp:Button ID="add" runat="server" OnClick="add_Click" Text="Add" Height="29px" Visible="False" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="update" runat="server" OnClick="update_Click" Text="Update" />
+                        <asp:Button ID="update" runat="server" OnClick="update_Click" Text="Update" Visible="False" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                     <td class="auto-style5">
-                        <asp:Button ID="delete" runat="server" OnClick="delete_Click" Text="Delete" />
+                        <asp:Button ID="delete" runat="server" OnClick="delete_Click" Text="Delete" Visible="False" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="search" runat="server" Text="Search" OnClick="search_Click1" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                    <td>
                         <asp:Button ID="uploadfromexcel" runat="server" OnClick="uploadfromexcel_Click" Text="Bulk Upload from Excel" />
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4"></td>
+                    <td class="auto-style6"></td>
+                    <td class="auto-style2"></td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
