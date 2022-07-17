@@ -102,7 +102,7 @@
                         <asp:Label ID="Label2" runat="server" Text="Part Number"></asp:Label>
                     </td>
                     <td class="auto-style9">
-                        <asp:TextBox ID="partnumber" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="partnumber" runat="server" ReadOnly="True"></asp:TextBox>
                     </td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style7">&nbsp;</td>
@@ -113,7 +113,7 @@
                         <asp:Label ID="Label3" runat="server" Text="Part Discription"></asp:Label>
                     </td>
                     <td class="auto-style9">
-                        <asp:TextBox ID="partdiscription" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="partdiscription" runat="server" ReadOnly="True"></asp:TextBox>
                     </td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style7">&nbsp;</td>
@@ -124,7 +124,7 @@
                         <asp:Label ID="Label4" runat="server" Text="Category"></asp:Label>
                     </td>
                     <td class="auto-style9">
-                        <asp:TextBox ID="category" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="category" runat="server" ReadOnly="True"></asp:TextBox>
                     </td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style7">&nbsp;</td>
