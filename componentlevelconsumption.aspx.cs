@@ -109,7 +109,7 @@ namespace MorphleInventorymanagementSystem
         protected void Record_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into [Consumption Log] values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','" + DateTime.ParseExact(date.Text, "dd/MM/yyyy", null) + "','" + givenby.Text + "','" + receivedby.Text + "','" + Qty.Text + "','" + purpose.Text + "')", con);
+            SqlCommand cmd = new SqlCommand("insert into [Consumption Log] values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "',GETDATE(),'" + givenby.Text + "','" + receivedby.Text + "','" + Qty.Text + "','" + purpose.Text + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Write("<script>alert('Recorded in Consumption Log,Please click on Update Stock to update stock Quantity')</script>");

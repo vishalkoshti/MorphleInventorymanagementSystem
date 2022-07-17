@@ -40,6 +40,25 @@
             width: 217px;
             height: 101px;
         }
+        .auto-style11 {
+            width: 372px;
+            height: 48px;
+        }
+        .auto-style12 {
+            width: 217px;
+            height: 48px;
+        }
+        .auto-style13 {
+            width: 115px;
+            height: 48px;
+        }
+        .auto-style14 {
+            width: 189px;
+            height: 48px;
+        }
+        .auto-style15 {
+            height: 48px;
+        }
     </style>
 </head>
 <body>
@@ -124,13 +143,14 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Label ID="Label7" runat="server" Text="Date"></asp:Label>
+                        <asp:Label ID="Label7" runat="server" Text="Date" Visible="False"></asp:Label>
+                        <br />
                     </td>
                     <td class="auto-style9">
-                        <asp:TextBox ID="date" runat="server" OnTextChanged="date_TextChanged"></asp:TextBox>
+                        <asp:TextBox ID="date" runat="server" OnTextChanged="date_TextChanged" Visible="False"></asp:TextBox>
                     </td>
                     <td class="auto-style3">
-                        <asp:Button ID="dateselection" runat="server" OnClick="dateselection_Click" Text="Select Date" Width="112px" />
+                        <asp:Button ID="dateselection" runat="server" OnClick="dateselection_Click" Text="Select Date" Width="112px" Visible="False" />
                         <asp:Calendar ID="Calendar" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" Visible="False"></asp:Calendar>
                     </td>
                     <td class="auto-style7">&nbsp;</td>
@@ -148,11 +168,11 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style9">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style7">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style13">
+                        <asp:Label ID="Label8" runat="server" Text="NOTE:DATE WILL BE CONSIDERED AS CURRENT DATE INORDER TO AVOID MANIMUPLATION"></asp:Label>
+                    </td>
+                    <td class="auto-style14"></td>
+                    <td class="auto-style15"></td>
                 </tr>
                 <tr>
                     <td class="auto-style2">

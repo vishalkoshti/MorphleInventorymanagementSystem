@@ -96,13 +96,13 @@
                 <tr>
                     <td class="auto-style3"></td>
                     <td class="auto-style3">
-                        <asp:Label ID="Label5" runat="server" Text="Date"></asp:Label>
+                        <asp:Label ID="Label5" runat="server" Text="NOTE:DATE WILL BE RECORDED "></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                     <td class="auto-style3">
-                        <asp:TextBox ID="date" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="date" runat="server" Visible="False"></asp:TextBox>
                     </td>
                     <td class="auto-style3">
-                        <asp:Button ID="dateselection" runat="server" OnClick="dateselection_Click" Text="Select Date" />
+                        <asp:Button ID="dateselection" runat="server" OnClick="dateselection_Click" Text="Select Date" Visible="False" />
                         <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" Visible="False"></asp:Calendar>
                     </td>
                 </tr>

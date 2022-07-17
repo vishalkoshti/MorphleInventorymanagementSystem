@@ -127,12 +127,11 @@
             </tr>
             <tr>
                 <td class="auto-style4">
-                    <asp:Label ID="Label7" runat="server" Text="Date"></asp:Label>
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="date" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="date" runat="server" Visible="False"></asp:TextBox>
 &nbsp;
-                    <asp:Button ID="dateselection" runat="server" OnClick="dateselection_Click" Text="Date" />
+                    <asp:Button ID="dateselection" runat="server" OnClick="dateselection_Click" Text="Date" Visible="False" />
                     <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" Visible="False"></asp:Calendar>
                 </td>
                 <td>&nbsp;</td>
@@ -154,6 +153,15 @@
                 </td>
                 <td class="auto-style3">
                     <asp:TextBox ID="receivedby" runat="server"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">
+                    &nbsp;</td>
+                <td class="auto-style3">
+                    <asp:Label ID="Label7" runat="server" Text="NOTE:DATE WILL ALSO BE RECORDED"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
