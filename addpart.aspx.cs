@@ -78,13 +78,14 @@ namespace MorphleInventorymanagementSystem
             if (sdr.HasRows)
             {
                 Response.Write("<script>alert('Error, Please update or delete the using Data or Delete option as there Exists the same Part Number!!')</script>");
+                update.Visible = true;
+                delete.Visible = true;
             }
             else
             {
-                Response.Write("<script>alert('Proceed')</script>");
+                Response.Write("<script>alert('Proceed by Adding New Part')</script>");
                 add.Visible = true;
-                update.Visible = true;
-                delete.Visible = true;
+                
                 
             }
         }
