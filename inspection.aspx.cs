@@ -43,7 +43,7 @@ namespace MorphleInventorymanagementSystem
         protected void Submit_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into [QC Reports] values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','" + name.Text + "',CURDATE(),'" + qtyaccepted.Text + "','"+qtyrejected.Text+"')", con);
+            SqlCommand cmd = new SqlCommand("insert into [QC Reports] values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','" + name.Text + "',GETDATE(),'" + qtyaccepted.Text + "','"+qtyrejected.Text+"')", con);
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Write("<script>alert('Inspection Completed Succefully!!')</script>");

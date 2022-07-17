@@ -60,7 +60,7 @@ namespace MorphleInventorymanagementSystem
         {
           
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into ReceivePart values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','" + name.Text + "',CURDATE(),'" + qtyreceived.Text + "')", con);
+            SqlCommand cmd = new SqlCommand("insert into ReceivePart values ('" + partnumber.Text + "','" + partdiscription.Text + "','" + category.Text + "','" + name.Text + "',GETDATE(),'" + qtyreceived.Text + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Write("<script>alert('Received Succefully!!')</script>");
