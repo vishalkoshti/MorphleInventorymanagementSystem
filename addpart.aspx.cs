@@ -40,6 +40,12 @@ namespace MorphleInventorymanagementSystem
             con.Close();
             BindData();
             GridView1.DataBind();
+            cmd.Parameters.Clear();
+            con.Open();
+            SqlCommand cmd2 = new SqlCommand("insert into StockAvailability values ('" + TextBox1.Text + "','" + TextBox2.Text + "','" + DropDownList1.Text + "','" + 0 + "')", con);
+            cmd2.ExecuteNonQuery();
+            con.Close();
+            Response.Write("<script>alert('Part Added to BOM List Succefully!!')</script>");
         }
 
         protected void update_Click(object sender, EventArgs e)
