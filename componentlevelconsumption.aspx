@@ -100,7 +100,7 @@
                     <asp:Label ID="Label4" runat="server" Text="Qty Given"></asp:Label>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="Qty" runat="server" ReadOnly="True"></asp:TextBox>
+                    <asp:TextBox ID="Qty" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
